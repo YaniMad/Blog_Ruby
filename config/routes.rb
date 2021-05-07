@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  get 'landing/home'
   resources :comments
   resources :posts
   devise_for :users, controllers: { sessions: 'users/sessions' }
 
-  root 'posts#index'
+  root 'landing#home'
 end
