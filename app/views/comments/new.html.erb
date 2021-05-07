@@ -3,8 +3,9 @@
 
 <%= form_for @comment do |c| %>
 <%= c.text_area :body %> <br />
-<%= c.select :post_id, Post.pluck(:name) %> <br />
+<%= c.select :post_id, Post.pluck(:id) %> <br />
 <%= c.submit %> 
 <% end %>
+
 
 
